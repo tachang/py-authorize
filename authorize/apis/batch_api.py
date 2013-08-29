@@ -11,8 +11,8 @@ class BatchAPI(BaseAPI):
         return self.api._make_call(self._details_request(batch_id))
 
     def list(self, params={}):
-        batch = self._deserialize(ListBatchSchema(), params)
-        return self.api._make_call(self._list_request(batch))
+        #batch = self._deserialize(ListBatchSchema(), params)
+        return self.api._make_call(self._list_request(params))
 
     # The following methods generate the XML for the corresponding API calls.
     # This makes unit testing each of the calls easier.
